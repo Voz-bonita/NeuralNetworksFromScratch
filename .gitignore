@@ -1,4 +1,5 @@
 venv/
 __pycache__
 
-images/assets
+assets/images
+videos/

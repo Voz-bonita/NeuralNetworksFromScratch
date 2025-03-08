@@ -37,7 +37,7 @@ $$f(x_1, x_2) = x_1x_2 + x_1^2 + e^{\sin{(x_2)}}$$
   <img src="../images/complicated.png"/>
 </center>
 
-##
+## {transition="fade" transition-speed="slow"}
 
 $$\class{green}{x_{1}}w_1 + x_{2}w_2 + b_1 = h_1^*$$
 
@@ -45,7 +45,7 @@ $$\class{green}{x_{1}}w_1 + x_{2}w_2 + b_1 = h_1^*$$
   <img src="../images/step_by_step_feed_forward_animation/0.png"/>
 </center>
 
-##
+## {transition="fade" transition-speed="slow"}
 
 $$\class{green}{x_{1}w_1} + x_{2}w_2 + b_1 = h_1^*$$
 
@@ -53,7 +53,7 @@ $$\class{green}{x_{1}w_1} + x_{2}w_2 + b_1 = h_1^*$$
   <img src="../images/step_by_step_feed_forward_animation/1.png"/>
 </center>
 
-##
+## {transition="fade" transition-speed="slow"}
 
 $$\class{green}{x_{1}w_1 + x_{2}w_2} + b_1 = h_1^*$$
 
@@ -61,7 +61,7 @@ $$\class{green}{x_{1}w_1 + x_{2}w_2} + b_1 = h_1^*$$
   <img src="../images/step_by_step_feed_forward_animation/2.png"/>
 </center>
 
-##
+## {transition="fade" transition-speed="slow"}
 
 $$\class{green}{x_{1}w_1 + x_{2}w_2 + b_1 = h_1^*}$$
 
@@ -69,12 +69,14 @@ $$\class{green}{x_{1}w_1 + x_{2}w_2 + b_1 = h_1^*}$$
   <img src="../images/step_by_step_feed_forward_animation/3.png"/>
 </center>
 
-## {transition="fade" transition-speed="fast"}
+## {transition="fade" transition-speed="slow"}
+
+$$x_{1}w_1 + x_{2}w_2 + b_1 = h_1^*$$
 
 $$x_{1}\class{green}{w_3} + x_{2}\class{green}{w_4} + \class{green}{b_2} = \class{green}{h_2^*}$$
 
 <center>
-  <img src="../images/step_by_step_feed_forward_animation/4.png"/>
+  <img src="../images/step_by_step_feed_forward_animation/4.png" style="margin-top:-2em"/>
 </center>
 
 ##

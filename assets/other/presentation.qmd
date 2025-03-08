@@ -1,0 +1,38 @@
+---
+title: ""
+subtitle: ""
+author: ""
+date: ""
+execute:
+  echo: false
+format:
+  revealjs: 
+    theme: dark
+    embed-resources: true
+    self-contained-math: true
+---
+
+## {transition="convex" transition-speed="slow"}
+
+$$f(x) = x$$
+
+<center>
+  <img src="../images/identity.png"/>
+</center>
+
+## {transition="convex" transition-speed="slow"}
+
+$$f(x) = x^2$$
+
+<center>
+  <img src="../images/square.png"/>
+</center>
+
+## {transition="convex" transition-speed="slow"}
+
+$$f(x_1, x_2) = x_1x_2 + x_1^2 + e^{\sin{(x_2)}}$$
+
+<center>
+  <img src="../images/complicated.png"/>
+</center>
+

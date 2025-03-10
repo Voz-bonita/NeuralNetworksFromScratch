@@ -113,24 +113,15 @@ $$\begin{bmatrix}x_{1}&x_{2}\end{bmatrix}\begin{bmatrix}w_{1}&w_{2}\\w_{3}&w_{4}
   <img src="../images/221_nn.png" style="margin-top:-1em"/>
 </center>
 
-##
+## {transition="fade" transition-speed="slow"}
 
-$$\begin{bmatrix}
-    x_{11}&x_{12}\\
-    x_{21}&x_{22}\\
-\end{bmatrix}
-\begin{bmatrix}
-    w_{1}&w_{2}\\
-    w_{3}&w_{4}\\
-\end{bmatrix}^T + 
-\begin{bmatrix}
-    b_1&b_2\\
-    b_1&b_2\\
-\end{bmatrix} \xrightarrow{\phi}
-\begin{bmatrix}
-    h_{11}&h_{12}\\
-    h_{21}&h_{22}\\
-\end{bmatrix}$$
+$$\begin{bmatrix}x_{11}&x_{12}\\x_{21}&x_{22}\end{bmatrix}\begin{bmatrix}w_{1}&w_{2}\\w_{3}&w_{4}\\\end{bmatrix}^T + \begin{bmatrix}b_1&b_2\\b_1&b_2\end{bmatrix} = \begin{bmatrix}h_{11}^*&h_{12}^*\\h_{21}^*&h_{22}^*\end{bmatrix}$$
+
+<center>
+  <img src="../images/221_nn.png" style="margin-top:-1em"/>
+</center>
+
+##
 
 $$\vec{x}\vec{W}^T + \vec{b} \xrightarrow{\phi} \vec{h}$$
 

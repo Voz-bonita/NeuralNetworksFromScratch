@@ -121,6 +121,22 @@ $$\begin{bmatrix}x_{11}&x_{12}\\x_{21}&x_{22}\end{bmatrix}\begin{bmatrix}w_{1}&w
   <img src="../images/221_nn.png" style="margin-top:-1em"/>
 </center>
 
+## {transition="fade" transition-speed="slow"}
+
+$$\vec{x}\vec{W}^T + \vec{b} = \vec{h}^*$$
+
+<center>
+  <img src="../images/221_nn.png" style="margin-top:-1em"/>
+</center>
+
+##
+
+$$\vec{x}\vec{W}^T + \vec{b} \xrightarrow{\phi} \vec{h}$$
+
+<center>
+  <img src="../images/221_h_nn.png" style="margin-top:-1em"/>
+</center>
+
 ##
 
 $$\vec{x}\vec{W}^T + \vec{b} \xrightarrow{\phi} \vec{h}$$

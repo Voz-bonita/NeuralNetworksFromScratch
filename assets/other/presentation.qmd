@@ -129,7 +129,7 @@ $$\vec{x}\vec{W}^T + \vec{b} = \vec{h}^*$$
   <img src="../images/221_nn.png" style="margin-top:-1em"/>
 </center>
 
-##
+## {transition="fade" transition-speed="slow"}
 
 $$\vec{x}\vec{W}^T + \vec{b} \xrightarrow{\phi} \vec{h}$$
 
@@ -137,9 +137,18 @@ $$\vec{x}\vec{W}^T + \vec{b} \xrightarrow{\phi} \vec{h}$$
   <img src="../images/221_h_nn.png" style="margin-top:-1em"/>
 </center>
 
-##
+## {transition="fade" transition-speed="slow"}
 
 $$\vec{x}\vec{W}^T + \vec{b} \xrightarrow{\phi} \vec{h}$$
 
+<center>
+  <img src="../images/221_y_nn.png" style="margin-top:-1em"/>
+</center>
+
+## {transition="fade" transition-speed="slow"}
+
 $$\vec{h}\vec{V}^T + \vec{d} \xrightarrow{\phi} \mathbf{\vec{\hat{y}}}$$
 
+<center>
+  <img src="../images/221_y_nn.png" style="margin-top:-1em"/>
+</center>

@@ -1,5 +1,9 @@
 .green { color: lightgreen; }
 
+.reveal .slides {
+    margin-top: 100px; /* Adjust this value as needed */
+}
+
 .equation-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two equal columns */

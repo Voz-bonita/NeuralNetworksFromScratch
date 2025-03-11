@@ -253,3 +253,89 @@ x2 = np.random.uniform(-5, 5, SAMPLE_SIZE)
 y = x1 * x2 + x1**2 + np.exp(np.sin(x2))
 ```
 
+## {auto-animate=True}
+
+```python
+import numpy as np
+
+SAMPLE_SIZE = 10_000
+np.random.seed(2025)  # Return same sample every time
+
+x1 = np.random.uniform(-5, 5, SAMPLE_SIZE)
+x2 = np.random.uniform(-5, 5, SAMPLE_SIZE)
+
+y = x1 * x2 + x1**2 + np.exp(np.sin(x2))
+
+def sigmoid(x):
+    return 1/(1 + np.exp(-x))
+```
+
+## {auto-animate=True}
+
+```python
+import numpy as np
+
+SAMPLE_SIZE = 10_000
+np.random.seed(2025)  # Return same sample every time
+
+x1 = np.random.uniform(-5, 5, SAMPLE_SIZE)
+x2 = np.random.uniform(-5, 5, SAMPLE_SIZE)
+
+y = x1 * x2 + x1**2 + np.exp(np.sin(x2))
+
+def sigmoid(x):
+    return 1/(1 + np.exp(-x))
+
+def feed_forward(x
+```
+
+<center>
+  <img src="../images/step_by_step_feed_forward_animation/2.png" style="margin-top:-1em"/>
+</center>
+
+## {auto-animate=True}
+
+```python
+import numpy as np
+
+SAMPLE_SIZE = 10_000
+np.random.seed(2025)  # Return same sample every time
+
+x1 = np.random.uniform(-5, 5, SAMPLE_SIZE)
+x2 = np.random.uniform(-5, 5, SAMPLE_SIZE)
+
+y = x1 * x2 + x1**2 + np.exp(np.sin(x2))
+
+def sigmoid(x):
+    return 1/(1 + np.exp(-x))
+
+def feed_forward(x, xh_weights, xh_biases
+```
+
+<center>
+  <img src="../images/step_by_step_feed_forward_animation/2.png" style="margin-top:-1em"/>
+</center>
+
+## {auto-animate=True}
+
+```python
+import numpy as np
+
+SAMPLE_SIZE = 10_000
+np.random.seed(2025)  # Return same sample every time
+
+x1 = np.random.uniform(-5, 5, SAMPLE_SIZE)
+x2 = np.random.uniform(-5, 5, SAMPLE_SIZE)
+
+y = x1 * x2 + x1**2 + np.exp(np.sin(x2))
+
+def sigmoid(x):
+    return 1/(1 + np.exp(-x))
+
+def feed_forward(x, xh_weights, xh_biases, hy_weights, hy_biases):
+```
+
+
+<center>
+  <img src="../images/221_y_nn.png" style="margin-top:-1em"/>
+</center>

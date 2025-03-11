@@ -152,3 +152,66 @@ $$\vec{h}\vec{V}^T + \vec{d} \xrightarrow{\phi} \mathbf{\vec{\hat{y}}}$$
 <center>
   <img src="../images/221_y_nn.png" style="margin-top:-1em"/>
 </center>
+
+## {transition="fade" transition-speed="slow"}
+
+
+<div class="equation-grid">
+  
+<!-- First equation -->
+<div class="equation-box">
+
+  $$\overset{\text{linear}}{\phi(x) = x}$$
+
+</div>
+
+<!-- Second equation -->
+<div class="equation-box">
+
+  $$\overset{\text{ReLU}}{\phi(x) =\begin{cases}0,&\text{if }x < 0\\x,&\text{otherwise}\end{cases}}$$
+
+</div>
+
+<!-- First image -->
+<div>
+  <img src="../images/activation_functions/linear.png" class="activation-img"/>
+</div>
+
+<!-- Second image -->
+<div>
+  <img src="../images/activation_functions/relu.png" class="activation-img"/>
+</div>
+
+</div>
+
+
+## {transition="fade" transition-speed="slow"}
+
+
+<div class="equation-grid">
+  
+<!-- First equation -->
+<div class="equation-box">
+
+  $$\overset{\text{sigmoid}}{\phi(x) =  \frac{1}{1 + e^{-x}}}$$
+
+</div>
+
+<!-- Second equation -->
+<div class="equation-box">
+
+  $$\overset{\text{tanh}}{\phi(x) =  \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}}}$$
+
+</div>
+
+<!-- First image -->
+<div>
+  <img src="../images/activation_functions/sigmoid.png"/>
+</div>
+
+<!-- Second image -->
+<div>
+  <img src="../images/activation_functions/tanh.png"/>
+</div>
+
+</div>

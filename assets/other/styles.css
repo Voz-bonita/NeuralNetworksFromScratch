@@ -1,1 +1,18 @@
 .green { color: lightgreen; }
+
+.equation-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.equation-box {
+    min-width: 200px;
+}
+
+.activation-img {
+    max-width: 200px;
+}

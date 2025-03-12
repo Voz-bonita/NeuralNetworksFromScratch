@@ -45,7 +45,9 @@ $$f(x_1, x_2) = x_1x_2 + x_1^2 + e^{\sin{(x_2)}}$$
 $$\class{green}{x_{1}}w_1 + x_{2}w_2 + b_1 = h_1^*$$
 
 <center>
-  <img src="../images/step_by_step_feed_forward_animation/0.png"/>
+<div class="svg-container">
+  <img src="../svg/x1.svg" class="svg-image show">
+</div>
 </center>
 
 ## {transition="fade" transition-speed="slow"}
@@ -53,7 +55,9 @@ $$\class{green}{x_{1}}w_1 + x_{2}w_2 + b_1 = h_1^*$$
 $$\class{green}{x_{1}w_1} + x_{2}w_2 + b_1 = h_1^*$$
 
 <center>
-  <img src="../images/step_by_step_feed_forward_animation/1.png"/>
+<div class="svg-container">
+  <img src="../svg/x1w.svg" class="svg-image show">
+</div>
 </center>
 
 ## {transition="fade" transition-speed="slow"}
@@ -61,7 +65,9 @@ $$\class{green}{x_{1}w_1} + x_{2}w_2 + b_1 = h_1^*$$
 $$\class{green}{x_{1}w_1 + x_{2}w_2} + b_1 = h_1^*$$
 
 <center>
-  <img src="../images/step_by_step_feed_forward_animation/2.png"/>
+<div class="svg-container">
+  <img src="../svg/x12w.svg" class="svg-image show">
+</div>
 </center>
 
 ## {transition="fade" transition-speed="slow"}
@@ -69,7 +75,9 @@ $$\class{green}{x_{1}w_1 + x_{2}w_2} + b_1 = h_1^*$$
 $$\class{green}{x_{1}w_1 + x_{2}w_2 + b_1 = h_1^*}$$
 
 <center>
-  <img src="../images/step_by_step_feed_forward_animation/3.png"/>
+<div class="svg-container">
+  <img src="../svg/x12wb.svg" class="svg-image show">
+</div>
 </center>
 
 ## {transition="fade" transition-speed="slow"}
@@ -79,7 +87,9 @@ $$x_{1}w_1 + x_{2}w_2 + b_1 = h_1^*$$
 $$x_{1}\class{green}{w_3} + x_{2}\class{green}{w_4} + \class{green}{b_2} = \class{green}{h_2^*}$$
 
 <center>
-  <img src="../images/step_by_step_feed_forward_animation/4.png" style="margin-top:-2em"/>
+<div class="svg-container">
+  <img src="../svg/x12wbh2.svg" class="svg-image show" style="margin-top:1em">
+</div>
 </center>
 
 ## {transition="fade" transition-speed="slow"}
@@ -137,15 +147,9 @@ $$\vec{x}\vec{W}^T + \vec{b} = \vec{h}^*$$
 $$\vec{x}\vec{W}^T + \vec{b} \xrightarrow{\phi} \vec{h}$$
 
 <center>
-  <img src="../images/221_h_nn.png" style="margin-top:-1em"/>
-</center>
-
-## {transition="fade" transition-speed="slow"}
-
-$$\vec{x}\vec{W}^T + \vec{b} \xrightarrow{\phi} \vec{h}$$
-
-<center>
-  <img src="../images/221_y_nn.png" style="margin-top:-1em"/>
+<div class="svg-container">
+  <img src="../svg/h.svg" class="svg-image show">
+</div>
 </center>
 
 ## {transition="fade" transition-speed="slow"}
@@ -153,7 +157,9 @@ $$\vec{x}\vec{W}^T + \vec{b} \xrightarrow{\phi} \vec{h}$$
 $$\vec{h}\vec{V}^T + \vec{d} \xrightarrow{\phi} \mathbf{\vec{\hat{y}}}$$
 
 <center>
-  <img src="../images/221_y_nn.png" style="margin-top:-1em"/>
+<div class="svg-container">
+  <img src="../svg/ywb_nodes.svg" class="svg-image show">
+</div>
 </center>
 
 ## {transition="fade" transition-speed="slow"}

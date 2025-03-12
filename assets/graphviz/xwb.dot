@@ -22,6 +22,7 @@ graph NeuralNetwork {
       
     B1 -- H1 [color=lightgreen];
     B1 -- H2 [color=lightgreen];
+    H1 -- H2 [style=invis];
     
     // Connecting Input to Hidden Layer
     X1 -- H1 [color=lightgreen];

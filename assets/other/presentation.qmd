@@ -12,6 +12,7 @@ format:
     self-contained-math: true
     width: 1920
     height: 1080
+    auto-play-media: true
 css: styles.css
 highlight-style: github
 ---
@@ -605,3 +606,71 @@ MSE(y, y_hat)
 ```
 
 $$MSE(y, \hat{y}) = \frac{\sum_{i}^{n}(y_i - \hat{y}_i)^2}{n} = 0.38$$
+
+## {transition="fade" transition-speed="fast"}
+
+$$f(x) = x$$
+$$\frac{\delta f}{\delta x}(x) = 1$$
+
+<center>
+  <img src="../images/linear_animation/0000.png" width="1200"/>
+</center>
+
+## {transition="fade" transition-speed="fast"}
+
+$$f(x) = x$$
+$$\frac{\delta f}{\delta x}(x) = 1$$
+
+<center>
+<video data-autoplay width="1200" src="../videos/linear_derivative.mp4">
+</video>
+</center>
+
+## {transition="fade" transition-speed="fast"}
+
+$$f(x) = x^2$$
+$$\frac{\delta f}{\delta x}(x) = 2x$$
+
+<center>
+  <img src="../images/square_animation/0000.png" width="1200"/>
+</center>
+
+## {transition="fade" transition-speed="fast"}
+
+$$f(x) = x^2$$
+$$\frac{\delta f}{\delta x}(x) = 2x$$
+
+<center>
+<video data-autoplay width="1200" src="../videos/square_derivative.mp4">
+</video>
+</center>
+
+##
+
+$$MSE(y, \hat{y})$$
+
+::: {.fragment .fade-in}
+
+$$MSE(y, \vec{x}; \vec{\theta})$$
+
+:::
+
+::: {.fragment .fade-in}
+
+$$\begin{pmatrix}\frac{\partial MSE}{\partial w_1}&\frac{\partial MSE}{\partial w_2}&\cdots\end{pmatrix}$$
+
+:::
+
+::: {.fragment .fade-in}
+
+$$\Delta_{\vec{\theta}} MSE(y, \vec{x}; \vec{\theta})$$
+
+:::
+
+::: {.fragment .fade-in}
+
+<center style="font-size: 2em; font-weight: bold;">
+Gradient Descent
+</center>
+
+:::

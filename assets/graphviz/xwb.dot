@@ -1,0 +1,36 @@
+graph NeuralNetwork {
+    rankdir=LR; // Left to Right direction
+    bgcolor=transparent; // Set background color to transparent
+    node [shape=circle, style=filled, fontcolor=black, fillcolor=grey, fixedsize=true, width=0.35, height=0.35, fontsize=10, penwidth=0.2];
+    edge [color=grey, fontcolor=white, fontsize=10, penwidth=0.5];
+    
+    // Input layer
+    X1 [label=""];
+    X2 [label=""];
+    
+    // Hidden layer
+    H1 [label=""];
+    H2 [label=""];
+    
+    // Bias node (placed above the hidden layer)
+    B1 [label="b"];
+    
+    // Output layer
+    Y1 [label=""];
+
+    {rank=same; B1; H1; H2;}
+      
+    B1 -- H1 [color=lightgreen];
+    B1 -- H2 [color=lightgreen];
+    
+    // Connecting Input to Hidden Layer
+    X1 -- H1 [color=lightgreen];
+    X1 -- H2 [color=lightgreen];
+    X2 -- H1 [color=lightgreen];
+    X2 -- H2 [color=lightgreen];
+
+    
+    // Connecting Hidden to Output Layer
+    H1 -- Y1;
+    H2 -- Y1;
+}

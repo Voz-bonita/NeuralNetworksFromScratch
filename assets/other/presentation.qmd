@@ -758,24 +758,3 @@ $$\frac{\partial L}{\partial w_6} = \class{green}{D_{y, \hat{y}}}\frac{\partial 
 $$\frac{\partial L}{\partial w_5} = \class{green}{D_{y, \hat{y}}}\frac{\partial y^*_{\vec{\theta}}}{\partial w_{5}}$$
 
 $$\frac{\partial L}{\partial b_2} = \class{green}{D_{y, \hat{y}}}\frac{\partial y^*_{\vec{\theta}}}{\partial h_{2}}\frac{\partial h_2}{\partial h_2^*}\frac{\partial h_2^*}{\partial b_2}$$
-
-## {auto-animate="true"}
-
-$$\frac{\partial L}{\partial b_{3}} = \frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{y^*_{\vec{\theta}}}\frac{\partial y^*_{\vec{\theta}}}{\partial b_{3}}$$
-
-$$\frac{\partial L}{\partial w_6}(y, \hat{y_{\vec{\theta}}}) = \frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial y^*_{\vec{\theta}}}\frac{\partial y^*}{\partial w_{6}}$$
-
-$$\frac{\partial L}{\partial w_5}(y, \hat{y_{\vec{\theta}}}) = \frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial y^*_{\vec{\theta}}}\frac{\partial y^*_{\vec{\theta}}}{\partial w_{5}}$$
-
-
-
-$$\frac{\partial L}{\partial w_4}(y, \hat{y_{\vec{\theta}}}) = \frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial y^*_{\vec{\theta}}}\frac{\partial y^*_{\vec{\theta}}}{\partial h_{2}}\frac{\partial h_2}{\partial h_2^*}\frac{\partial h_2^*}{\partial w_4}$$
-
-$$\frac{\partial L}{\partial w_3}(y, \hat{y_{\vec{\theta}}}) = \frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial y^*_{\vec{\theta}}}\frac{\partial y^*_{\vec{\theta}}}{\partial h_{2}}\frac{\partial h_2}{\partial h_2^*}\frac{\partial h_2^*}{\partial w_3}$$
-
-$$\frac{\partial L}{\partial b_1}(y, \hat{y_{\vec{\theta}}}) = \frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial y^*_{\vec{\theta}}}\frac{\partial y^*_{\vec{\theta}}}{\partial h_{1}}\frac{\partial h_1}{\partial h_1^*}\frac{\partial h_1^*}{\partial b_1}$$
-
-$$\frac{\partial L}{\partial w_2}(y, \hat{y_{\vec{\theta}}}) = \frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial y^*_{\vec{\theta}}}\frac{\partial y^*_{\vec{\theta}}}{\partial h_{1}}\frac{\partial h_1}{\partial h_1^*}\frac{\partial h_1^*}{\partial w_2}$$
-
-$$\frac{\partial L}{\partial w_1}(y, \hat{y_{\vec{\theta}}}) = \frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial y^*_{\vec{\theta}}}\frac{\partial y^*_{\vec{\theta}}}{\partial h_{1}}\frac{\partial h_1}{\partial h_1^*}\frac{\partial h_1^*}{\partial w_1}$$
-

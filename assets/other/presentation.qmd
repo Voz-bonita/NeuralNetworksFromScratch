@@ -610,7 +610,7 @@ $$MSE(y, \hat{y}) = \frac{\sum_{i}^{n}(y_i - \hat{y}_i)^2}{n} = 0.38$$
 ## {transition="fade" transition-speed="fast"}
 
 $$f(x) = x$$
-$$\frac{\delta f}{\delta x}(x) = 1$$
+$$\frac{df}{dx}(x) = 1$$
 
 <center>
   <img src="../images/linear_animation/0000.png" width="1200"/>
@@ -619,7 +619,7 @@ $$\frac{\delta f}{\delta x}(x) = 1$$
 ## {transition="fade" transition-speed="fast"}
 
 $$f(x) = x$$
-$$\frac{\delta f}{\delta x}(x) = 1$$
+$$\frac{df}{dx}(x) = 1$$
 
 <center>
 <video data-autoplay width="1200" src="../videos/linear_derivative.mp4">
@@ -629,7 +629,7 @@ $$\frac{\delta f}{\delta x}(x) = 1$$
 ## {transition="fade" transition-speed="fast"}
 
 $$f(x) = x^2$$
-$$\frac{\delta f}{\delta x}(x) = 2x$$
+$$\frac{d f}{dx}(x) = 2x$$
 
 <center>
   <img src="../images/square_animation/0000.png" width="1200"/>
@@ -638,7 +638,7 @@ $$\frac{\delta f}{\delta x}(x) = 2x$$
 ## {transition="fade" transition-speed="fast"}
 
 $$f(x) = x^2$$
-$$\frac{\delta f}{\delta x}(x) = 2x$$
+$$\frac{df}{dx}(x) = 2x$$
 
 <center>
 <video data-autoplay width="1200" src="../videos/square_derivative.mp4">
@@ -674,3 +674,108 @@ Gradient Descent
 </center>
 
 :::
+
+## {transition="fade" transition-speed="fast"}
+
+$$\text{Minimize } MSE(y, \hat{y})$$
+
+::: {.fragment .fade-in}
+
+$$\frac{\partial MSE}{\partial \theta{i}}(y, \hat{y_{\vec{\theta}}})$$
+
+:::
+
+## {transition="fade" transition-speed="fast"}
+
+$$\{w_1,w_2,w_3,w_4,b_1,b_2\}$$
+
+<center>
+<div class="svg-container">
+  <img src="../svg/xwb.svg" class="svg-image show">
+</div>
+</center>
+
+## {transition="fade" transition-speed="fast"}
+
+$$\{w_1,w_2,w_3,w_4,b_1,b_2\}$$
+
+$$\{w_5, w_6, b_3\}$$
+
+<center>
+<div class="svg-container">
+  <img src="../svg/ywb.svg" class="svg-image show">
+</div>
+</center>
+
+## {transition="fade" transition-speed="fast"}
+
+$$\frac{\partial L}{\partial b_{3}}(y, \hat{y_{\vec{\theta}}})$$
+
+## {transition="fade" transition-speed="fast"}
+
+$$\frac{\partial L}{\partial b_{3}} = \frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial b_{3}}$$
+
+$$\hat{y}_{\vec{\theta}} = \phi(y^*_{\vec{\theta}})$$
+
+## {transition="fade" transition-speed="fast"}
+
+$$\frac{\partial L}{\partial b_{3}} = \frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial y^*_{\vec{\theta}}}\frac{\partial y^*_{\vec{\theta}}}{\partial b_{3}}$$
+
+$$\hat{y}_{\vec{\theta}} = \phi(h_1w_5 + h_2w_6 + b_3)$$
+
+## {auto-animate="true"}
+
+$$\frac{\partial L}{\partial b_{3}} = \frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial y^*_{\vec{\theta}}}\frac{\partial y^*_{\vec{\theta}}}{\partial b_{3}}$$
+
+$$\frac{\partial L}{\partial w_6} = \frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{y^*_{\vec{\theta}}}\frac{\partial y^*_{\vec{\theta}}}{\partial w_{6}}$$
+
+$$\frac{\partial L}{\partial w_5} = \frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial y^*_{\vec{\theta}}}\frac{\partial y^*_{\vec{\theta}}}{\partial w_{5}}$$
+
+## {auto-animate="true"}
+
+$$\frac{\partial L}{\partial b_{3}} = \class{green}{\frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial y^*_{\vec{\theta}}}}\frac{\partial y^*_{\vec{\theta}}}{\partial b_{3}}$$
+
+$$\frac{\partial L}{\partial w_6} = \class{green}{\frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{y^*_{\vec{\theta}}}}\frac{\partial y^*_{\vec{\theta}}}{\partial w_{6}}$$
+
+$$\frac{\partial L}{\partial w_5} = \class{green}{\frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial y^*_{\vec{\theta}}}}\frac{\partial y^*_{\vec{\theta}}}{\partial w_{5}}$$
+
+## {auto-animate="true"}
+
+$$\frac{\partial L}{\partial b_{3}} = \class{green}{\frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial y^*_{\vec{\theta}}}}\frac{\partial y^*_{\vec{\theta}}}{\partial b_{3}}$$
+
+$$\frac{\partial L}{\partial w_6} = \class{green}{\frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{y^*_{\vec{\theta}}}}\frac{\partial y^*_{\vec{\theta}}}{\partial w_{6}}$$
+
+$$\frac{\partial L}{\partial w_5} = \class{green}{\frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial y^*_{\vec{\theta}}}}\frac{\partial y^*_{\vec{\theta}}}{\partial w_{5}}$$
+
+$$\frac{\partial L}{\partial b_2} = \class{green}{\frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial y^*_{\vec{\theta}}}}\frac{\partial y^*_{\vec{\theta}}}{\partial h_{2}}\frac{\partial h_2}{\partial h_2^*}\frac{\partial h_2^*}{\partial b_2}$$
+
+## {transition="fade"}
+
+$$\frac{\partial L}{\partial b_{3}} = \class{green}{D_{y, \hat{y}}}\frac{\partial y^*_{\vec{\theta}}}{\partial b_{3}}$$
+
+$$\frac{\partial L}{\partial w_6} = \class{green}{D_{y, \hat{y}}}\frac{\partial y^*_{\vec{\theta}}}{\partial w_{6}}$$
+
+$$\frac{\partial L}{\partial w_5} = \class{green}{D_{y, \hat{y}}}\frac{\partial y^*_{\vec{\theta}}}{\partial w_{5}}$$
+
+$$\frac{\partial L}{\partial b_2} = \class{green}{D_{y, \hat{y}}}\frac{\partial y^*_{\vec{\theta}}}{\partial h_{2}}\frac{\partial h_2}{\partial h_2^*}\frac{\partial h_2^*}{\partial b_2}$$
+
+## {auto-animate="true"}
+
+$$\frac{\partial L}{\partial b_{3}} = \frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{y^*_{\vec{\theta}}}\frac{\partial y^*_{\vec{\theta}}}{\partial b_{3}}$$
+
+$$\frac{\partial L}{\partial w_6}(y, \hat{y_{\vec{\theta}}}) = \frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial y^*_{\vec{\theta}}}\frac{\partial y^*}{\partial w_{6}}$$
+
+$$\frac{\partial L}{\partial w_5}(y, \hat{y_{\vec{\theta}}}) = \frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial y^*_{\vec{\theta}}}\frac{\partial y^*_{\vec{\theta}}}{\partial w_{5}}$$
+
+
+
+$$\frac{\partial L}{\partial w_4}(y, \hat{y_{\vec{\theta}}}) = \frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial y^*_{\vec{\theta}}}\frac{\partial y^*_{\vec{\theta}}}{\partial h_{2}}\frac{\partial h_2}{\partial h_2^*}\frac{\partial h_2^*}{\partial w_4}$$
+
+$$\frac{\partial L}{\partial w_3}(y, \hat{y_{\vec{\theta}}}) = \frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial y^*_{\vec{\theta}}}\frac{\partial y^*_{\vec{\theta}}}{\partial h_{2}}\frac{\partial h_2}{\partial h_2^*}\frac{\partial h_2^*}{\partial w_3}$$
+
+$$\frac{\partial L}{\partial b_1}(y, \hat{y_{\vec{\theta}}}) = \frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial y^*_{\vec{\theta}}}\frac{\partial y^*_{\vec{\theta}}}{\partial h_{1}}\frac{\partial h_1}{\partial h_1^*}\frac{\partial h_1^*}{\partial b_1}$$
+
+$$\frac{\partial L}{\partial w_2}(y, \hat{y_{\vec{\theta}}}) = \frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial y^*_{\vec{\theta}}}\frac{\partial y^*_{\vec{\theta}}}{\partial h_{1}}\frac{\partial h_1}{\partial h_1^*}\frac{\partial h_1^*}{\partial w_2}$$
+
+$$\frac{\partial L}{\partial w_1}(y, \hat{y_{\vec{\theta}}}) = \frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial y^*_{\vec{\theta}}}\frac{\partial y^*_{\vec{\theta}}}{\partial h_{1}}\frac{\partial h_1}{\partial h_1^*}\frac{\partial h_1^*}{\partial w_1}$$
+

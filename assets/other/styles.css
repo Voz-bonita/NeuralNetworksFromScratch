@@ -42,3 +42,7 @@
     opacity: 1;
 }
 
+.reveal code {
+    max-height: 100% !important;
+  }
+

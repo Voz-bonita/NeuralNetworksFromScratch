@@ -709,35 +709,86 @@ $$\{w_5, w_6, b_3\}$$
 
 ## {transition="fade" transition-speed="fast"}
 
-$$\frac{\partial L}{\partial b_{3}}(y, \hat{y_{\vec{\theta}}})$$
+$$\frac{\partial L}{\partial w_{1}}(y, \hat{y_{\vec{\theta}}})$$
 
 ## {transition="fade" transition-speed="fast"}
 
-$$\frac{\partial L}{\partial b_{3}} = \frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial b_{3}}$$
-
-$$\hat{y}_{\vec{\theta}} = \phi(y^*_{\vec{\theta}})$$
+$$\frac{\partial L}{\partial w_{1}} = \frac{\partial L}{\partial \hat{y}}\frac{\partial \hat{y}}{\partial w_{1}}$$
 
 ## {transition="fade" transition-speed="fast"}
 
-$$\frac{\partial L}{\partial b_{3}} = \frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial y^*_{\vec{\theta}}}\frac{\partial y^*_{\vec{\theta}}}{\partial b_{3}}$$
+$$\frac{\partial L}{\partial w_{1}} = \frac{\partial L}{\partial \hat{y}}\frac{\partial \hat{y}}{\partial y^*}\frac{\partial y^*}{\partial w_{1}}$$
 
-$$\hat{y}_{\vec{\theta}} = \phi(h_1w_5 + h_2w_6 + b_3)$$
+## {transition="fade" transition-speed="fast"}
 
-## {auto-animate="true"}
-
-$$\frac{\partial L}{\partial b_{3}} = \frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial y^*_{\vec{\theta}}}\frac{\partial y^*_{\vec{\theta}}}{\partial b_{3}}$$
-
-$$\frac{\partial L}{\partial w_6} = \frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{y^*_{\vec{\theta}}}\frac{\partial y^*_{\vec{\theta}}}{\partial w_{6}}$$
-
-$$\frac{\partial L}{\partial w_5} = \frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial y^*_{\vec{\theta}}}\frac{\partial y^*_{\vec{\theta}}}{\partial w_{5}}$$
+$$\frac{\partial L}{\partial w_{1}} = \frac{\partial L}{\partial \hat{y}}\frac{\partial \hat{y}}{\partial y^*}\frac{\partial y^*}{\partial h_{1}}\frac{\partial h_1}{\partial w_{1}}$$
 
 ## {auto-animate="true"}
 
-$$\frac{\partial L}{\partial b_{3}} = \class{green}{\frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial y^*_{\vec{\theta}}}}\frac{\partial y^*_{\vec{\theta}}}{\partial b_{3}}$$
+$$\frac{\partial L}{\partial w_{1}} = \frac{\partial L}{\partial \hat{y}}\frac{\partial \hat{y}}{\partial y^*}\frac{\partial y^*}{\partial h_{1}}\frac{\partial h_1}{\partial h_1^*}\frac{\partial h_1^*}{\partial w_1}$$
 
-$$\frac{\partial L}{\partial w_6} = \class{green}{\frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{y^*_{\vec{\theta}}}}\frac{\partial y^*_{\vec{\theta}}}{\partial w_{6}}$$
 
-$$\frac{\partial L}{\partial w_5} = \class{green}{\frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial y^*_{\vec{\theta}}}}\frac{\partial y^*_{\vec{\theta}}}{\partial w_{5}}$$
+::: {.fragment .fade-in}
+
+$$L = (y - \hat{y})^2$$
+
+$$\frac{\partial L}{\partial \hat{y}} = -2(y - \hat{y})$$
+
+:::
+
+## {auto-animate="true"}
+
+$$\frac{\partial L}{\partial w_{1}} = \frac{\partial L}{\partial \hat{y}}\frac{\partial \hat{y}}{\partial y^*}\frac{\partial y^*}{\partial h_{1}}\frac{\partial h_1}{\partial h_1^*}\frac{\partial h_1^*}{\partial w_1}$$
+
+$$\frac{\partial L}{\partial \hat{y}} = -2(y - \hat{y})$$
+
+$$\frac{\partial \hat{y}}{\partial y^*} = 1$$
+
+## {auto-animate="true"}
+
+$$\frac{\partial L}{\partial w_{1}} = \frac{\partial L}{\partial \hat{y}}\frac{\partial \hat{y}}{\partial y^*}\frac{\partial y^*}{\partial h_{1}}\frac{\partial h_1}{\partial h_1^*}\frac{\partial h_1^*}{\partial w_1}$$
+
+$$\frac{\partial L}{\partial \hat{y}} = -2(y - \hat{y})$$
+
+$$\hat{y} = y^*$$
+
+$$\frac{\partial \hat{y}}{\partial y^*} = 1$$
+
+## {auto-animate="true"}
+
+$$h_1 = (1 + e^{-h_1^*})^{-1}$$
+
+$$\frac{\partial h_1}{\partial h_1^*} = -(1 + e^{-h_1^*})^{-2}e^{-h_1^*}(-1)$$
+
+::: {.fragment .fade-in}
+
+$$\frac{\partial h_1}{\partial h_1^*} = (1 + e^{-h_1^*})^{-2}e^{-h_1^*}$$
+
+:::
+
+::: {.fragment .fade-in}
+
+$$\frac{\partial h_1}{\partial h_1^*} = h_1^2e^{-h_1^*}$$
+
+:::
+
+::: {.fragment .fade-in}
+
+$$\frac{\partial h_1}{\partial h_1^*} = h_1^2(e^{-h_1^*} + 1 - 1)$$
+
+:::
+
+::: {.fragment .fade-in}
+
+$$\frac{\partial h_1}{\partial h_1^*} = h_1^2(h_1^{-1} - 1)$$
+
+:::
+
+::: {.fragment .fade-in}
+
+$$\frac{\partial h_1}{\partial h_1^*} = h_1(1 - h_1)$$
+
+:::
 
 ## {auto-animate="true"}
 
@@ -749,12 +800,3 @@ $$\frac{\partial L}{\partial w_5} = \class{green}{\frac{\partial L}{\partial \ha
 
 $$\frac{\partial L}{\partial b_2} = \class{green}{\frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial y^*_{\vec{\theta}}}}\frac{\partial y^*_{\vec{\theta}}}{\partial h_{2}}\frac{\partial h_2}{\partial h_2^*}\frac{\partial h_2^*}{\partial b_2}$$
 
-## {transition="fade"}
-
-$$\frac{\partial L}{\partial b_{3}} = \class{green}{D_{y, \hat{y}}}\frac{\partial y^*_{\vec{\theta}}}{\partial b_{3}}$$
-
-$$\frac{\partial L}{\partial w_6} = \class{green}{D_{y, \hat{y}}}\frac{\partial y^*_{\vec{\theta}}}{\partial w_{6}}$$
-
-$$\frac{\partial L}{\partial w_5} = \class{green}{D_{y, \hat{y}}}\frac{\partial y^*_{\vec{\theta}}}{\partial w_{5}}$$
-
-$$\frac{\partial L}{\partial b_2} = \class{green}{D_{y, \hat{y}}}\frac{\partial y^*_{\vec{\theta}}}{\partial h_{2}}\frac{\partial h_2}{\partial h_2^*}\frac{\partial h_2^*}{\partial b_2}$$

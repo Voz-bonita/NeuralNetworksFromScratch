@@ -17,6 +17,15 @@ css: styles.css
 highlight-style: github
 ---
 
+##
+
+##
+
+<center>
+<video data-autoplay width="1200" src="../videos/nn_animation.mp4" style="margin-top: -300px;">
+</video>
+</center>
+
 ## {transition="convex" transition-speed="slow"}
 
 $$f(x) = x$$

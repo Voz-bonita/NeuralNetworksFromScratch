@@ -859,6 +859,23 @@ for i in range(EPOCHS):
 
 ## {auto-animate="true"}
 
+```python
+random_noise = np.random.normal(0, 1, SAMPLE_SIZE)
+y = x1**2 + np.exp(np.sin(x2)) + random_noise
+```
+
+$$y \sim  N\left(x_1^2 + e^{\sin(x_2)}, ~1\right)$$
+
+$$\text{Minium } MSE \approx 1$$
+
+## {auto-animate="true"}
+
+<center>
+  <img src="../images/training(2).png"/>
+</center>
+
+## {auto-animate="true"}
+
 <center>
   <img src="../images/training.png"/>
 </center>

@@ -28,26 +28,9 @@ highlight-style: github
 
 ## {transition="convex" transition-speed="slow"}
 
-$$f(x) = x$$
-
 <center>
-  <img src="../images/identity.png"/>
-</center>
-
-## {transition="convex" transition-speed="slow"}
-
-$$f(x) = x^2$$
-
-<center>
-  <img src="../images/square.png"/>
-</center>
-
-## {transition="convex" transition-speed="slow"}
-
-$$f(x_1, x_2) = x_1x_2 + x_1^2 + e^{\sin{(x_2)}}$$
-
-<center>
-  <img src="../images/complicated.png"/>
+<video data-autoplay src="../../media/videos/equation_morph/1080p60/equation_morph.mp4">
+</video>
 </center>
 
 ## {transition="fade" transition-speed="slow"}

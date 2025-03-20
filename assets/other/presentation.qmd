@@ -26,7 +26,7 @@ highlight-style: github
 </video>
 </center>
 
-## {transition="convex" transition-speed="slow"}
+## {transition="fade" transition-speed="slow"}
 
 <center>
 <video data-autoplay src="../../media/videos/equation_morph/1080p60/equation_morph.mp4">

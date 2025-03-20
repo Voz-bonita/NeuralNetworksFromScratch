@@ -521,7 +521,7 @@ Max: {np.max(y):.3f}
 
 ## {auto-animate="true"}
 
-```python
+```{.python code-line-numbers="9"}
 def MSE(y, y_hat):
     return np.mean(np.array(y - y_hat)**2)
 
@@ -542,7 +542,7 @@ $$MSE(y, \hat{y}) = \frac{\sum_{i}^{n}(y_i - \hat{y}_i)^2}{n} = 2.44$$
 
 ## {auto-animate="true"}
 
-```python
+```{.python code-line-numbers="9"}
 def MSE(y, y_hat):
     return np.mean(np.array(y - y_hat)**2)
 

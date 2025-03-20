@@ -471,7 +471,7 @@ MSE(y, y_hat)
 
 ::: {.fragment .fade-in}
 
-$$MSE(y, \hat{y}) = \frac{\sum_{i}^{n}(y_i - \hat{y}_i)^2}{n} = 1.55$$
+$$MSE(y, \hat{y}) = \frac{\sum_{i}^{n}(y_i - \hat{y}_i)^2}{n} = 2.44$$
 
 :::
 
@@ -511,11 +511,11 @@ Max: {np.max(y):.3f}
 
 ::: {.fade-in}
 
-Mean: $2.209$
-
-Min: $-2.003$
-
-Max: $7.503$
+\begin{align*}
+\text{Mean}&: 2.218\\
+\text{Min}&: 1.002\\
+\text{Max}&: 4.262
+\end{align*}
 
 :::
 
@@ -538,7 +538,7 @@ y_hat = feed_forward(X, xh_weights, xh_biases, hy_weights, hy_biases)
 MSE(y, y_hat)
 ```
 
-$$MSE(y, \hat{y}) = \frac{\sum_{i}^{n}(y_i - \hat{y}_i)^2}{n} = 1.55$$
+$$MSE(y, \hat{y}) = \frac{\sum_{i}^{n}(y_i - \hat{y}_i)^2}{n} = 2.44$$
 
 ## {auto-animate="true"}
 
@@ -559,7 +559,7 @@ y_hat = feed_forward(X, xh_weights, xh_biases, hy_weights, hy_biases)
 MSE(y, y_hat)
 ```
 
-$$MSE(y, \hat{y}) = \frac{\sum_{i}^{n}(y_i - \hat{y}_i)^2}{n} = 1.55$$
+$$MSE(y, \hat{y}) = \frac{\sum_{i}^{n}(y_i - \hat{y}_i)^2}{n} = 2.44$$
 
 ## {auto-animate="true"}
 
@@ -580,7 +580,7 @@ y_hat = feed_forward(X, xh_weights, xh_biases, hy_weights, hy_biases)
 MSE(y, y_hat)
 ```
 
-$$MSE(y, \hat{y}) = \frac{\sum_{i}^{n}(y_i - \hat{y}_i)^2}{n} = 0.38$$
+$$MSE(y, \hat{y}) = \frac{\sum_{i}^{n}(y_i - \hat{y}_i)^2}{n} = 0.89$$
 
 ## {transition="fade" transition-speed="fast"}
 

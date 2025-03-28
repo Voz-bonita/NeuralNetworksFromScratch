@@ -245,7 +245,7 @@ y.reshape((SAMPLE_SIZE, -1)) # Same dimension as NN output
 ## {auto-animate=true}
 
 
-```{.python code-line-numbers="9-10"}
+```{.python code-line-numbers="10,11"}
 import numpy as np
 
 SAMPLE_SIZE = 10_000
@@ -259,6 +259,14 @@ random_noise = np.random.normal(0, 1, SAMPLE_SIZE)
 y = x1*x2 + x1**2 + np.exp(np.sin(x2)) + random_noise
 y.reshape((SAMPLE_SIZE, -1)) # Same dimension as NN output
 ```
+
+::: {.fragment .fade-in}
+
+$$y \sim  N\left(x_1x_2 + x_1^2 + e^{\sin(x_2)}, ~1\right)$$
+
+$$\hat{\sigma}^2 \approx 1$$
+
+:::
 
 
 ## {auto-animate=True}
@@ -499,6 +507,32 @@ MSE(y, y_hat)
 ::: {.fragment .fade-in}
 
 $$MSE(y, \hat{y}) = \frac{\sum_{i}^{n}(y_i - \hat{y}_i)^2}{n} = 2.44$$
+
+:::
+
+::: {.fragment .fade-in}
+
+$$\hat{\sigma}^2 = \frac{\sum_{i}^{n}(y_i - E(y_i|x_{1i}, x_{2i}))^2}{n - 1}$$
+
+:::
+
+::: {.fragment .fade-in}
+
+$$\hat{y_i} = E(y_i|x_{1i}, x_{2i})$$
+
+:::
+
+::: {.fragment .fade-in}
+
+$$y \sim N(x_1x_2 + x_1^2 + e^{\sin(x_2)}, 1)$$
+
+$$E(y|x_1, x_2) = x_1x_2 + x_1^2 + e^{\sin(x_2)}$$
+
+:::
+
+::: {.fragment .fade-in-then-out}
+
+$$\hat{\sigma}^2 \approx 1 \Rightarrow \text{Minimum } MSE \approx 1$$
 
 :::
 
@@ -861,17 +895,6 @@ EPOCHS = 100
 for i in range(EPOCHS):
     backpropagation(X, y, xh_weights, xh_biases, hy_weights, hy_biases, 0.01)
 ``` 
-
-## {auto-animate="true"}
-
-```python
-random_noise = np.random.normal(0, 1, SAMPLE_SIZE)
-y = x1**2 + np.exp(np.sin(x2)) + random_noise
-```
-
-$$y \sim  N\left(x_1^2 + e^{\sin(x_2)}, ~1\right)$$
-
-$$\text{Minium } MSE \approx 1$$
 
 ## {auto-animate="true"}
 

@@ -236,6 +236,7 @@ np.random.seed(2025)  # Return same sample every time
 
 x1 = np.random.uniform(-5, 5, SAMPLE_SIZE)
 x2 = np.random.uniform(-5, 5, SAMPLE_SIZE)
+X = np.matrix([x1, x2]).T.reshape((-1, 2))
 
 y = x1 * x2 + x1**2 + np.exp(np.sin(x2))
 y.reshape((SAMPLE_SIZE, -1)) # Same dimension as NN output
@@ -252,6 +253,7 @@ np.random.seed(2025)  # Return same sample every time
 
 x1 = np.random.uniform(-5, 5, SAMPLE_SIZE)
 x2 = np.random.uniform(-5, 5, SAMPLE_SIZE)
+X = np.matrix([x1, x2]).T.reshape((SAMPLE_SIZE, FEATURES))
 
 random_noise = np.random.normal(0, 1, SAMPLE_SIZE)
 y = x1*x2 + x1**2 + np.exp(np.sin(x2)) + random_noise
@@ -269,6 +271,7 @@ np.random.seed(2025)  # Return same sample every time
 
 x1 = np.random.uniform(-5, 5, SAMPLE_SIZE)
 x2 = np.random.uniform(-5, 5, SAMPLE_SIZE)
+X = np.matrix([x1, x2]).T.reshape((SAMPLE_SIZE, FEATURES))
 
 random_noise = np.random.normal(0, 1, SAMPLE_SIZE)
 y = x1*x2 + x1**2 + np.exp(np.sin(x2)) + random_noise
@@ -288,6 +291,7 @@ np.random.seed(2025)  # Return same sample every time
 
 x1 = np.random.uniform(-5, 5, SAMPLE_SIZE)
 x2 = np.random.uniform(-5, 5, SAMPLE_SIZE)
+X = np.matrix([x1, x2]).T.reshape((SAMPLE_SIZE, FEATURES))
 
 random_noise = np.random.normal(0, 1, SAMPLE_SIZE)
 y = x1*x2 + x1**2 + np.exp(np.sin(x2)) + random_noise
@@ -315,6 +319,7 @@ np.random.seed(2025)  # Return same sample every time
 
 x1 = np.random.uniform(-5, 5, SAMPLE_SIZE)
 x2 = np.random.uniform(-5, 5, SAMPLE_SIZE)
+X = np.matrix([x1, x2]).T.reshape((SAMPLE_SIZE, FEATURES))
 
 random_noise = np.random.normal(0, 1, SAMPLE_SIZE)
 y = x1*x2 + x1**2 + np.exp(np.sin(x2)) + random_noise
@@ -360,6 +365,7 @@ np.random.seed(2025)  # Return same sample every time
 
 x1 = np.random.uniform(-5, 5, SAMPLE_SIZE)
 x2 = np.random.uniform(-5, 5, SAMPLE_SIZE)
+X = np.matrix([x1, x2]).T.reshape((SAMPLE_SIZE, FEATURES))
 
 random_noise = np.random.normal(0, 1, SAMPLE_SIZE)
 y = x1*x2 + x1**2 + np.exp(np.sin(x2)) + random_noise
@@ -481,7 +487,6 @@ xh_biases = np.zeros(shape=(HIDDEN_LAYERS_SIZES[0]))
 hy_weights = np.ones(shape=(OUPUTS, HIDDEN_LAYERS_SIZES[-1])).T
 hy_biases = np.zeros(shape=(OUPUTS))
 
-X = np.matrix([x1, x2]).T.reshape((SAMPLE_SIZE, FEATURES))
 y_hat = feed_forward(X, xh_weights, xh_biases, hy_weights, hy_biases)
 
 # Loss function
@@ -499,12 +504,6 @@ $$MSE(y, \hat{y}) = \frac{\sum_{i}^{n}(y_i - \hat{y}_i)^2}{n} = 2.44$$
 
 ::: {.fragment .fade-in}
 
-$$y = f(x_1, x_2) = x_1x_2 + x_1^2 + e^{\sin{(x_2)}}$$
-
-:::
-
-::: {.fragment .fade-in}
-
 $$\hat{y} = \phi(y^*) \in (0, 1)$$
 
 :::
@@ -512,6 +511,12 @@ $$\hat{y} = \phi(y^*) \in (0, 1)$$
 ::: {.fragment .fade-in}
 
 $$y \in (0, 1) ?$$
+
+:::
+
+::: {.fragment .fade-in}
+
+$$y = f(x_1, x_2) = x_1x_2 + x_1^2 + e^{\sin{(x_2)}}$$
 
 :::
 

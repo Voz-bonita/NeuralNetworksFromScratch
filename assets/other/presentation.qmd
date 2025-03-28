@@ -506,7 +506,7 @@ MSE(y, y_hat)
 
 ::: {.fragment .fade-in}
 
-$$MSE(y, \hat{y}) = \frac{\sum_{i}^{n}(y_i - \hat{y}_i)^2}{n} = 2.44$$
+$$MSE(y, \hat{y}) = \frac{\sum_{i}^{n}(y_i - \hat{y}_i)^2}{n} = 203.18$$
 
 :::
 
@@ -530,11 +530,29 @@ $$E(y|x_1, x_2) = x_1x_2 + x_1^2 + e^{\sin(x_2)}$$
 
 :::
 
-::: {.fragment .fade-in-then-out}
+## {auto-animate="true"}
+
+```python
+xh_weights = np.ones(shape=(HIDDEN_LAYERS_SIZES[0], FEATURES)).T
+xh_biases = np.zeros(shape=(HIDDEN_LAYERS_SIZES[0]))
+
+hy_weights = np.ones(shape=(OUPUTS, HIDDEN_LAYERS_SIZES[-1])).T
+hy_biases = np.zeros(shape=(OUPUTS))
+
+y_hat = feed_forward(X, xh_weights, xh_biases, hy_weights, hy_biases)
+
+# Loss function
+def MSE(y, y_hat):
+    return np.mean(np.array(y - y_hat)**2)
+
+MSE(y, y_hat)
+```
+
+$$MSE(y, \hat{y}) = \frac{\sum_{i}^{n}(y_i - \hat{y}_i)^2}{n} = 203.18$$
+
+$$y \sim N(x_1x_2 + x_1^2 + e^{\sin(x_2)}, 1)$$
 
 $$\hat{\sigma}^2 \approx 1 \Rightarrow \text{Minimum } MSE \approx 1$$
-
-:::
 
 ::: {.fragment .fade-in}
 
@@ -573,9 +591,9 @@ Max: {np.max(y):.3f}
 ::: {.fade-in}
 
 \begin{align*}
-\text{Mean}&: 2.218\\
-\text{Min}&: 1.002\\
-\text{Max}&: 4.262
+\text{Mean}&: 9.532\\
+\text{Min}&: -7.282\\
+\text{Max}&: 53.252
 \end{align*}
 
 :::
@@ -620,7 +638,7 @@ y_hat = feed_forward(X, xh_weights, xh_biases, hy_weights, hy_biases)
 MSE(y, y_hat)
 ```
 
-$$MSE(y, \hat{y}) = \frac{\sum_{i}^{n}(y_i - \hat{y}_i)^2}{n} = 2.44$$
+$$MSE(y, \hat{y}) = \frac{\sum_{i}^{n}(y_i - \hat{y}_i)^2}{n} = 203.18$$
 
 ## {auto-animate="true"}
 
@@ -641,7 +659,7 @@ y_hat = feed_forward(X, xh_weights, xh_biases, hy_weights, hy_biases)
 MSE(y, y_hat)
 ```
 
-$$MSE(y, \hat{y}) = \frac{\sum_{i}^{n}(y_i - \hat{y}_i)^2}{n} = 0.89$$
+$$MSE(y, \hat{y}) = \frac{\sum_{i}^{n}(y_i - \hat{y}_i)^2}{n} = 198.66$$
 
 ## {transition="fade" transition-speed="fast"}
 

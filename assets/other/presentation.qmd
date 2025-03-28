@@ -963,7 +963,7 @@ def backpropagation(X, y, xh_weights, xh_biases, hy_weights, hy_biases, lr):
     return MSE(y, y_hat)
 
 
-EPOCHS = 100
+EPOCHS = 1000
 for i in range(EPOCHS):
     backpropagation(X, y, xh_weights, xh_biases, hy_weights, hy_biases, 0.01)
 ``` 

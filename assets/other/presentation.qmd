@@ -846,13 +846,12 @@ $$\frac{\partial h_1}{\partial h_1^*} = h_1(1 - h_1)$$
 
 ## {auto-animate="true"}
 
-$$\frac{\partial L}{\partial b_{3}} = \class{green}{\frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial y^*_{\vec{\theta}}}}\frac{\partial y^*_{\vec{\theta}}}{\partial b_{3}}$$
-
-$$\frac{\partial L}{\partial w_6} = \class{green}{\frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{y^*_{\vec{\theta}}}}\frac{\partial y^*_{\vec{\theta}}}{\partial w_{6}}$$
-
-$$\frac{\partial L}{\partial w_5} = \class{green}{\frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial y^*_{\vec{\theta}}}}\frac{\partial y^*_{\vec{\theta}}}{\partial w_{5}}$$
-
-$$\frac{\partial L}{\partial b_2} = \class{green}{\frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial y^*_{\vec{\theta}}}}\frac{\partial y^*_{\vec{\theta}}}{\partial h_{2}}\frac{\partial h_2}{\partial h_2^*}\frac{\partial h_2^*}{\partial b_2}$$
+\begin{align*}
+\frac{\partial L}{\partial b_{3}} &= \class{green}{\frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial y^*_{\vec{\theta}}}}\frac{\partial y^*_{\vec{\theta}}}{\partial b_{3}}\\
+\frac{\partial L}{\partial w_6} &= \class{green}{\frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{y^*_{\vec{\theta}}}}\frac{\partial y^*_{\vec{\theta}}}{\partial w_{6}}\\
+\frac{\partial L}{\partial w_5} &= \class{green}{\frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial y^*_{\vec{\theta}}}}\frac{\partial y^*_{\vec{\theta}}}{\partial w_{5}}\\
+\frac{\partial L}{\partial b_2} &= \class{green}{\frac{\partial L}{\partial \hat{y}_{\vec{\theta}}}\frac{\partial \hat{y}_{\vec{\theta}}}{\partial y^*_{\vec{\theta}}}}\frac{\partial y^*_{\vec{\theta}}}{\partial h_{2}}\frac{\partial h_2}{\partial h_2^*}\frac{\partial h_2^*}{\partial b_2}
+\end{align*}
 
 
 ## {auto-animate="true"}

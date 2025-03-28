@@ -241,6 +241,24 @@ y = x1 * x2 + x1**2 + np.exp(np.sin(x2))
 y.reshape((SAMPLE_SIZE, -1)) # Same dimension as NN output
 ```
 
+## {auto-animate=true}
+
+
+```{.python code-line-numbers="9-10"}
+import numpy as np
+
+SAMPLE_SIZE = 10_000
+np.random.seed(2025)  # Return same sample every time
+
+x1 = np.random.uniform(-5, 5, SAMPLE_SIZE)
+x2 = np.random.uniform(-5, 5, SAMPLE_SIZE)
+
+random_noise = np.random.normal(0, 1, SAMPLE_SIZE)
+y = x1*x2 + x1**2 + np.exp(np.sin(x2)) + random_noise
+y.reshape((SAMPLE_SIZE, -1)) # Same dimension as NN output
+```
+
+
 ## {auto-animate=True}
 
 ```python
@@ -252,7 +270,8 @@ np.random.seed(2025)  # Return same sample every time
 x1 = np.random.uniform(-5, 5, SAMPLE_SIZE)
 x2 = np.random.uniform(-5, 5, SAMPLE_SIZE)
 
-y = x1 * x2 + x1**2 + np.exp(np.sin(x2))
+random_noise = np.random.normal(0, 1, SAMPLE_SIZE)
+y = x1*x2 + x1**2 + np.exp(np.sin(x2)) + random_noise
 y.reshape((SAMPLE_SIZE, -1)) # Same dimension as NN output
 
 def sigmoid(x):
@@ -270,7 +289,8 @@ np.random.seed(2025)  # Return same sample every time
 x1 = np.random.uniform(-5, 5, SAMPLE_SIZE)
 x2 = np.random.uniform(-5, 5, SAMPLE_SIZE)
 
-y = x1 * x2 + x1**2 + np.exp(np.sin(x2))
+random_noise = np.random.normal(0, 1, SAMPLE_SIZE)
+y = x1*x2 + x1**2 + np.exp(np.sin(x2)) + random_noise
 y.reshape((SAMPLE_SIZE, -1)) # Same dimension as NN output
 
 def sigmoid(x):
@@ -296,7 +316,8 @@ np.random.seed(2025)  # Return same sample every time
 x1 = np.random.uniform(-5, 5, SAMPLE_SIZE)
 x2 = np.random.uniform(-5, 5, SAMPLE_SIZE)
 
-y = x1 * x2 + x1**2 + np.exp(np.sin(x2))
+random_noise = np.random.normal(0, 1, SAMPLE_SIZE)
+y = x1*x2 + x1**2 + np.exp(np.sin(x2)) + random_noise
 y.reshape((SAMPLE_SIZE, -1)) # Same dimension as NN output
 
 def sigmoid(x):
@@ -340,7 +361,8 @@ np.random.seed(2025)  # Return same sample every time
 x1 = np.random.uniform(-5, 5, SAMPLE_SIZE)
 x2 = np.random.uniform(-5, 5, SAMPLE_SIZE)
 
-y = x1 * x2 + x1**2 + np.exp(np.sin(x2))
+random_noise = np.random.normal(0, 1, SAMPLE_SIZE)
+y = x1*x2 + x1**2 + np.exp(np.sin(x2)) + random_noise
 y.reshape((SAMPLE_SIZE, -1)) # Same dimension as NN output
 
 def sigmoid(x):

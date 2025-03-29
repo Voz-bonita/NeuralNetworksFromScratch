@@ -617,7 +617,7 @@ y_hat = feed_forward(X, xh_weights, xh_biases, hy_weights, hy_biases)
 MSE(y, y_hat)
 ```
 
-$$MSE(y, \hat{y}) = \frac{\sum_{i}^{n}(y_i - \hat{y}_i)^2}{n} = 2.44$$
+$$MSE(y, \hat{y}) = \frac{\sum_{i}^{n}(y_i - \hat{y}_i)^2}{n} = 203.18$$
 
 ## {auto-animate="true"}
 

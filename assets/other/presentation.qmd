@@ -878,10 +878,14 @@ def backpropagation(X, y, xh_weights, xh_biases, hy_weights, hy_biases, lr):
     y_hat = y_star
 
     # Derivatives
-    dy_yhat = -2 / SAMPLE_SIZE * (y - y_hat)
-    dystar_hstar = h * (1 - h)
-    dystar_hstar = np.array(dystar_hstar * hy_weights.reshape(1, -1))
-    dystar_hstar = dy_yhat * dystar_hstar
+    dL_yhat = -2 / SAMPLE_SIZE * (y - y_hat)
+    dyhat_ystar = 1
+    dystar_h = hy_weights
+    dystar_w = h
+    dystar_b = 1
+    dh_hstar = h * (1 - h)
+    dhstar_w = X
+    dhstar_b = 1
 ```
 
 ## {auto-animate="true"}
@@ -896,17 +900,20 @@ def backpropagation(X, y, xh_weights, xh_biases, hy_weights, hy_biases, lr):
     y_hat = y_star
 
     # Derivatives
-    dy_yhat = -2 / SAMPLE_SIZE * (y - y_hat)
-    dystar_hstar = h * (1 - h)
-    dystar_hstar = np.array(dystar_hstar * hy_weights.reshape(1, -1))
-    dystar_hstar = dy_yhat * dystar_hstar
+    dL_yhat = -2 / SAMPLE_SIZE * (y - y_hat)
+    dyhat_ystar = 1
+    dystar_h = hy_weights
+    dystar_w = h
+    dystar_b = 1
+    dh_hstar = h * (1 - h)
+    dhstar_w = X
+    dhstar_b = 1
 
-    # Update weights and biases
-    hy_biases -= lr * np.sum(dy_yhat, axis=0)
-    hy_weights -= lr * np.sum(dy_yhat * h, axis=0).reshape(-1, 1)
-
-    xh_biases -= lr * np.sum(dystar_hstar, axis=0)
-    xh_weights -= lr * np.matmul(X.T, dystar_hstar)
+    dL_yb = dL_yhat * dyhat_ystar * dystar_b
+    dL_yw = dL_yhat * dyhat_ystar * dystar_w
+    dL_xb = dL_yhat * dyhat_ystar * np.multiply(dystar_h.T, dh_hstar) * dhstar_b
+    dL_xw = (dL_yhat * dyhat_ystar * np.multiply(dystar_h.T, dh_hstar)).T @ dhstar_w
+    # @ means matrix multiplication
 ```
 
 ## {auto-animate="true"}
@@ -921,18 +928,27 @@ def backpropagation(X, y, xh_weights, xh_biases, hy_weights, hy_biases, lr):
     y_hat = y_star
 
     # Derivatives
-    dy_yhat = -2 / SAMPLE_SIZE * (y - y_hat)
-    dystar_hstar = h * (1 - h)
-    dystar_hstar = np.array(dystar_hstar * hy_weights.reshape(1, -1))
-    dystar_hstar = dy_yhat * dystar_hstar
+    dL_yhat = -2 / SAMPLE_SIZE * (y - y_hat)
+    dyhat_ystar = 1
+    dystar_h = hy_weights
+    dystar_w = h
+    dystar_b = 1
+    dh_hstar = h * (1 - h)
+    dhstar_w = X
+    dhstar_b = 1
+
+    dL_yb = dL_yhat * dyhat_ystar * dystar_b
+    dL_yw = dL_yhat * dyhat_ystar * dystar_w
+    dL_xb = dL_yhat * dyhat_ystar * np.multiply(dystar_h.T, dh_hstar) * dhstar_b
+    dL_xw = (dL_yhat * dyhat_ystar * np.multiply(dystar_h.T, dh_hstar)).T @ dhstar_w
+
 
     # Update weights and biases
-    hy_biases -= lr * np.sum(dy_yhat, axis=0)
-    hy_weights -= lr * np.sum(dy_yhat * h, axis=0).reshape(-1, 1)
+    hy_biases -= lr * np.sum(dL_yb, axis=0)
+    hy_weights -= lr * np.sum(dL_yw, axis=0).reshape(-1, 1)
 
-    xh_biases -= lr * np.sum(dystar_hstar, axis=0)
-    xh_weights -= lr * np.matmul(X.T, dystar_hstar)
-
+    xh_biases -= lr * np.sum(dL_xb, axis=0)
+    xh_weights -= lr * dL_xw.T
     return MSE(y, y_hat)
 ```
 
@@ -948,18 +964,27 @@ def backpropagation(X, y, xh_weights, xh_biases, hy_weights, hy_biases, lr):
     y_hat = y_star
 
     # Derivatives
-    dy_yhat = -2 / SAMPLE_SIZE * (y - y_hat)
-    dystar_hstar = h * (1 - h)
-    dystar_hstar = np.array(dystar_hstar * hy_weights.reshape(1, -1))
-    dystar_hstar = dy_yhat * dystar_hstar
+    dL_yhat = -2 / SAMPLE_SIZE * (y - y_hat)
+    dyhat_ystar = 1
+    dystar_h = hy_weights
+    dystar_w = h
+    dystar_b = 1
+    dh_hstar = h * (1 - h)
+    dhstar_w = X
+    dhstar_b = 1
+
+    dL_yb = dL_yhat * dyhat_ystar * dystar_b
+    dL_yw = dL_yhat * dyhat_ystar * dystar_w
+    dL_xb = dL_yhat * dyhat_ystar * np.multiply(dystar_h.T, dh_hstar) * dhstar_b
+    dL_xw = (dL_yhat * dyhat_ystar * np.multiply(dystar_h.T, dh_hstar)).T @ dhstar_w
+
 
     # Update weights and biases
-    hy_biases -= lr * np.sum(dy_yhat, axis=0)
-    hy_weights -= lr * np.sum(dy_yhat * h, axis=0).reshape(-1, 1)
+    hy_biases -= lr * np.sum(dL_yb, axis=0)
+    hy_weights -= lr * np.sum(dL_yw, axis=0).reshape(-1, 1)
 
-    xh_biases -= lr * np.sum(dystar_hstar, axis=0)
-    xh_weights -= lr * np.matmul(X.T, dystar_hstar)
-
+    xh_biases -= lr * np.sum(dL_xb, axis=0)
+    xh_weights -= lr * dL_xw.T
     return MSE(y, y_hat)
 
 

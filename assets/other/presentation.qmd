@@ -341,19 +341,22 @@ def feed_forward(x, xh_weights, xh_biases
 
 <center>
 <div class="svg-container">
-  <img src="../svg/x.svg" class="svg-image show" id="svg1">
-  <img src="../svg/xwb.svg" class="svg-image" id="svg2">
+  <img src="../svg/x.svg" class="svg-image" id="svg1">
+  <img src="../svg/xwb.svg" class="svg-image inivisible" id="svg2">
 </div>
 </center>
 
 <script>
 function fadeSVGs(svgId1, svgId2) {
-  document.getElementById(svgId1).classList.add('show');
+  document.getElementById(svgId1).classList.remove('hide');
+  document.getElementById(svgId2).classList.add('inivisible');
   document.getElementById(svgId2).classList.remove('show');
+
   setTimeout(() => {
-    document.getElementById(svgId1).classList.remove('show');
-    document.getElementById(svgId2).classList.add('show');
-  }, 500);
+      document.getElementById(svgId1).classList.add('hide');
+      document.getElementById(svgId2).classList.remove('inivisible');
+      document.getElementById(svgId2).classList.add('show');
+  }, 1000);
 }
 
 window.addEventListener('DOMContentLoaded', () => {

@@ -1,3 +1,6 @@
 # Neural Networks From Scratch
 
-This repo contains the code used on the youtube video. The main objective is to showcase how one can write the code for a neural network without libraries such as Keras/Tensorflow or PyTorch, relying almost only on matrix multiplication to achieve a sequential neural network of fully connected layers.
+This repo contains the code used in the youtube video [https://youtu.be/Ww2FoIoDUxU](https://youtu.be/Ww2FoIoDUxU). The main objective is to showcase a visual explanation on the math and code for a deep feedforward neural network without libraries such as Keras/Tensorflow or PyTorch, relying almost entirely on matrix multiplications to achieve a sequential neural network of fully connected layers.
+
+Book reference used for this video:
+_Deep Learning_. Ian Goodfellow and Yoshua Bengio and Aaron Courville. MIT Press, 2016. Available at: [https://www.deeplearningbook.org/](https://www.deeplearningbook.org/)
